@@ -4,7 +4,7 @@ rust cli json filter by template json
 ## install
 
 ```shell
- cargo install   json-template-filter@v1.0.0
+ cargo install   json-template-filter@1.0.0
 ```
 
 ## usage
