@@ -1,7 +1,9 @@
 [package]
 name = "json-filter"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+description = "user-friendly json filter with template json"
+license = "MIT"
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
@@ -9,3 +11,6 @@ serde_json = "1.0"
 clap-verbosity-flag = "3.0.2"
 log = "0.4"
 env_logger = "0.11.8"
+
+[profile.release]
+opt-level = 3
