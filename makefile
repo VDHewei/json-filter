@@ -24,6 +24,11 @@ build_release:
 install:
 	cargo install --path .
 
+.PHONY: clean_test
+# clean test files
+clean_test:
+	rm -f tests/output.json
+
 # show help
 help:
 	@echo ''

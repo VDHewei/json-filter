@@ -21,6 +21,7 @@ struct CliArgs {
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = CliArgs::parse();
+    init_logger(&args);
     
     let input_data: Value = serde_json::from_str(&fs::read_to_string(&args.input)?)?;
     let template_data: Value = serde_json::from_str(&fs::read_to_string(&args.template)?)?;
@@ -30,8 +31,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let output_path = args.output.unwrap_or_else(|| "output.json".to_string().parse().unwrap());
     fs::write(&output_path, serde_json::to_string_pretty(&filtered)?)?;
 
-    println!("Filtered JSON saved to {:?}", output_path);
+    log::info!("Filtered JSON saved to {:?}", output_path);
     Ok(())
+}
+
+fn init_logger(args : &CliArgs) {
+    env_logger::Builder::new()
+        .filter_level(args.verbose.log_level_filter())
+        .init();
 }
 
 fn filter_json(input: &Value, template: &Value) -> Value {
