@@ -14,6 +14,16 @@ clean:
 run:
 	cargo run
 
+.PHONY: build_release
+# build project in release mode
+build_release:
+	cargo build --release
+
+.PHONY: install
+# install project
+install:
+	cargo install --release
+
 # show help
 help:
 	@echo ''
