@@ -4,6 +4,7 @@ version = "1.0.0"
 edition = "2021"
 description = "user-friendly json filter with template json"
 license = "MIT"
+authors = ["peerHe weblinuxgame@126.com"]
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
