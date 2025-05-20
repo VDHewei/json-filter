@@ -22,7 +22,7 @@ build_release:
 .PHONY: install
 # install project
 install:
-	cargo install
+	cargo install --path .
 
 # show help
 help:
