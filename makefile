@@ -38,7 +38,7 @@ package:
 .PHONY: publish
 # publish project
 publish:
-	cargo publish --token $CARGO_REGISTRY_TOKEN
+	cargo publish --token $(CARGO_REGISTRY_TOKEN)
 
 # show help
 help:
