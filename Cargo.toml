@@ -5,6 +5,8 @@ edition = "2021"
 description = "user-friendly json filter with template json"
 license = "MIT"
 authors = ["peerHe weblinuxgame@126.com"]
+readme = "README.md"
+repository = "https://github.com/vDHewei/json-filter"
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
