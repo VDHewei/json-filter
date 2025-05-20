@@ -33,7 +33,7 @@ clean_test:
 .PHONY: package
 # package project
 package:
-	cargo package --list --allow-dirty --allow-unstable
+	cargo package --list --allow-dirty --all-features
 
 .PHONY: publish
 # publish project
