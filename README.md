@@ -1,19 +1,19 @@
-# json-filter
+#  json-template-filter
 rust cli json filter by template json
 
 ## install
 
 ```shell
- cargo install github.com/VDHewei/json-filter@latest
+ cargo install   json-template-filter@v1.0.0
 ```
 
 ## usage
 
 ```shell
- json-filter -h  
+ json-template-filter -h  
  Json Filter Cli Tools
 
-Usage: json-filter.exe [OPTIONS]
+Usage:  json-template-filter.exe [OPTIONS]
 
 Options:
   -v, --verbose...           Increase logging verbosity
@@ -28,5 +28,5 @@ Options:
 ### example
 
 ```shell
-json-filter -q -i request.json  -t template.json -o output.json
+ json-template-filter -q -i request.json  -t template.json -o output.json
 ```

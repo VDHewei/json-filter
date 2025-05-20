@@ -183,7 +183,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "json-filter"
+name = "json-template-filter"
 version = "1.0.0"
 dependencies = [
  "clap",
