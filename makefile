@@ -1,3 +1,4 @@
+CARGO_REGISTRY_TOKEN ?=$(shell echo $(CARGO_REGISTRY_TOKEN))
 
 .PHONY: build_dev
 # build project in dev mode
@@ -28,6 +29,16 @@ install:
 # clean test files
 clean_test:
 	rm -f tests/output.json
+
+.PHONY: package
+# package project
+package:
+	cargo package --list --allow-dirty --allow-external --allow-unstable
+
+.PHONY: publish
+# publish project
+publish:
+	cargo publish --token $CARGO_REGISTRY_TOKEN
 
 # show help
 help:
