@@ -1,0 +1,6 @@
+/target
+tests/
+.docker/
+.idea/
+.vscode/
+log/
